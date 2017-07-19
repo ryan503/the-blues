@@ -2,7 +2,7 @@
 
 Personal blog theme for [Ryan O'Connor](http://ryanoconnor.tech).
 
-A very blue theme, built using Bootstrap v4 alpha and SASS.
+A very blue theme for my Ghost blog, built using Bootstrap v4 alpha and SASS.
 
 ## Notes
 
