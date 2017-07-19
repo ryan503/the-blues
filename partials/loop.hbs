@@ -1,0 +1,63 @@
+{{!-- This is the post loop - each post will be output using this markup --}}
+{{#foreach posts}}
+  {{#if @first}}
+      {{#is "home"}}
+        <div id="first-post" {{#if image}} style="background-image: url({{image}}){{/if}}">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+            {{#foreach tags}}
+                <span class="badge badge-default tag"><a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a></span>
+            {{/foreach}}
+            <h1 class="post-title display-4">{{title}}</h1>
+            <p class="lead">Posted on <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY h:mm A"}}</time></p>
+            <a class="btn btn-primary btn-lg" href="{{url}}">Read More</a>
+          </div>
+        </div>
+      </div>
+      {{/is}}
+      <div class="container posts-container">
+      <div class="row">
+      {{^is "home"}}
+        <div class="col-md-6">
+          <a href="{{url}}">
+          <div class="card card-inverse">
+            {{#if image}}
+            <img class="card-img" src="{{image}}" alt="{{title}}">
+            {{/if}}
+            <div class="card-img-overlay">
+              {{#foreach tags}}
+                  <span class="badge badge-default tag">{{name}}</span>
+              {{/foreach}}
+            <h2 class="card-title">{{title}}</h2>
+            <span class="card-subtitle mb-2">Posted on <time class="post-date" datetime="{{date format="YYYY-MM-DD HH:mm"}}">{{date format="MMMM DD YYYY h:mm A"}}</time></span>
+            </div>
+          </div></a>
+        </div>
+        {{/is}}
+  {{else}}
+  <div class="col-md-6">
+    <a href="{{url}}">
+    <div class="card card-inverse">
+      {{#if image}}
+      <img class="card-img" src="{{image}}" alt="{{title}}">
+      {{/if}}
+      <div class="card-img-overlay">
+        {{#foreach tags}}
+            <span class="badge badge-default tag">{{name}}</span>
+        {{/foreach}}
+      <h2 class="card-title">{{title}}</h2>
+      <span class="card-subtitle mb-2">Posted on <time class="post-date" datetime="{{date format="YYYY-MM-DD HH:mm"}}">{{date format="MMMM DD YYYY h:mm A"}}</time></span>
+      </div>
+    </div></a>
+  </div>
+  {{/if}}
+{{/foreach}}
+
+  </div>
+
+{{!-- Previous/next page links - displayed on every page --}}
+<div class="clearfix">
+{{pagination}}
+</div>
+
+  </div>

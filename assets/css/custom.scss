@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+$titleFont: "Oswald";
+
+@mixin background-gradient($startOpacity, $endOpacity) {
+  background: -webkit-linear-gradient(left, rgba(44, 62, 80, $startOpacity), rgba(34, 167, 240, $endOpacity)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgba(44, 62, 80, $startOpacity), rgba(34, 167, 240, $endOpacity)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgba(44, 62, 80, $startOpacity), rgba(34, 167, 240, $endOpacity)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(right, rgba(44, 62, 80, $startOpacity), rgba(34, 167, 240, $endOpacity)); /* Standard syntax */
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  min-width: 380px;
+  margin-bottom: 8rem;
+  background-color: #f8f8f6;
+  color: #333;
+}
+
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 8rem;
+  background-color: rgba(44, 62, 80, 1.0);
+  color: #999;
+}
+
+.footer-text {
+  padding-top: 1.5rem;
+  text-align: center;
+  .footer-icons {
+    font-size: 1.5rem;
+    a, a:visited, a:active {
+      color: #ccc;
+      margin: 0 .5rem 0 .5rem;
+    }
+    a:hover {
+      color: #fff;
+    }
+  }
+}
+
+.bg-gradient {
+  background-color: rgba(44, 62, 80, 1.0);
+  @include background-gradient(1.0, 1.0);
+}
+
+.badge-default {
+    background-color: rgba(44, 62, 80, 1.0);
+}
+
+.blue {
+  color: #22A7F0;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn-primary {
+    background-color: #22A7F0;
+    border-color: #1774a8;
+}
+
+.btn-primary:hover {
+   background-color:  #1774a8;
+}
+
+.btn-twitter {
+  font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #1DA1F2;
+  color: #fff;
+}
+
+.btn-twitter:hover {
+  background-color: #1780c1;
+  color: #ccc;
+}
+
+.btn-facebook {
+    font-size: 1rem;
+  text-transform: uppercase;
+  background-color: #3B5998;
+  color: #fff;
+}
+
+.btn-facebook:hover {
+  background-color: #2f4779;
+  color: #ccc;
+}
+.btn-google-plus {
+  text-transform: uppercase;
+  color: red;
+}
+
+.navbar-brand {
+  font-family: $titleFont;
+  text-transform: uppercase;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 700;
+}
+
+.navbar-toggler {
+  border: 0;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.nav-link {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #ccc !important;
+}
+
+.nav-icon {
+  span {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-icon {
+    span {
+      display: inline;
+    }
+  }
+  .bg-gradient .container {
+    width: 100% !important;
+
+  }
+}
+
+#first-post, #featured {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  .jumbotron {
+    @include background-gradient(.85, .65);
+    color: #fff;
+    margin-bottom: .5rem;
+    min-height: 400px;
+    a, a:active, a:visited {
+      color: #ccc;
+    }
+    .badge {
+      font-size: 1rem;
+      margin-bottom: .5rem;
+    }
+    .lead {
+      color: #ccc;
+      font-style: italic;
+    }
+  }
+}
+
+.container {
+  margin: 0 auto 0 auto;
+}
+
+.posts-container {
+  padding: 0;
+}
+
+.card-img-overlay {
+    @include background-gradient(.7, .7);
+    .badge {
+      margin-bottom: .5rem;
+    }
+}
+
+.card-img-overlay:hover {
+    background: rgba(44, 62, 80, 0.8);
+}
+
+.col-md-6, .col {
+  padding: .5rem !important;
+}
+
+.badge {
+  font-size: 1rem;
+}
+
+.page-separator {
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+    color:#2C3E50;
+    border-bottom: 3px solid #2C3E50;
+    span {
+        background-color: #f8f8f6;
+        position: relative;
+        top: 1.15rem;
+        padding-right: 1rem;
+    }
+}
+
+.card , .card-img {
+    min-height: 300px;
+    height: 100%;
+    max-height: 350px;
+    width: auto;
+}
+
+.card-subtitle {
+    font-style: italic;
+}
+
+.col-md-6 {
+    padding: 1rem;
+}
+
+.pagination {
+  margin: 1rem 0 1rem 0;
+  float: right;
+  font-size: 1.25rem;
+  .page-number {
+    color: #555;
+    margin: 0 1rem 0 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+.navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: .5rem;
+  }
+}
+
+.read-next-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  display: block;
+  .jumbotron {
+      margin: 0;
+      @include background-gradient(.7, .7);
+  }
+  .read-next-post {
+    text-align: center;
+    color: #ccc;
+  }
+  :hover {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.read-next-background:hover {
+  color: #fff;
+  text-decoration: none;
+  .jumbotron {
+    background: rgba(44, 62, 80, 0.8);
+  }
+}
+
+.share {
+  max-width: 850px;
+  margin: 1rem auto 1rem auto;
+}
+
+.post-content, .page-content {
+  p {
+      margin: 1rem auto 1rem auto;
+  }
+  p, span,ul,ol, hr {
+  line-height: 170%;
+  font-size: 1.25rem;
+  max-width: 850px;
+  margin: auto;
+  }
+  p img {
+    margin: 1rem auto 1rem auto;
+      width: 100%;
+  }
+  h1, h2,h3,h4,h5 {
+    max-width: 850px;
+    margin: 2rem auto 1rem auto;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: #2C3E50;
+  }
+}
+
+blockquote, .blockquote {
+    padding: .5rem 1rem;
+    margin: 2rem auto 1rem auto;
+    font-size: 1.25rem;
+    max-width: 850px;
+    border-left: .25rem solid #ddd;
+    p {
+      max-width: 100% !important;
+    }
+}
+
+.page-content {
+    padding-bottom: 2rem;
+}
+
+@media(min-width: 960px) {
+  .post-content p img, .page-content p img {
+    margin-left: -30%;
+    width: 160%;
+  }
+}
+
+.subscribe-widget {
+  border: 1px solid #ccc;
+  background-color: #eee;
+  font-size: 1.25rem;
+  margin: 2rem auto 1rem auto;
+  padding: 2rem;
+  h3 {
+    color: #2C3E50;
+    font-weight: 700;
+  }
+  .form-control {
+    max-width: 500px;
+    margin:auto;
+  }
+}
+
+.embed-responsive  {
+  margin-bottom: 1rem;
+}
+
+#disqus_thread {
+  margin: 1rem auto 1rem auto;
+}
+
+hr {
+  color: #ddd;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}

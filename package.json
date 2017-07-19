@@ -1,0 +1,14 @@
+{
+  "name": "The Blues",
+  "description": "Custom theme for Ryan O'Connor's personal blog. Built using Bootstap v4a.",
+  "version": "1.0",
+  "engines": {
+    "ghost": "1.0.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ryan O'Connor",
+    "email": "hi@ryanoconnor.tech",
+    "url": "htts://ryanoconnor.tech"
+  }
+}

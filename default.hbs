@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {{!-- Document Settings --}}
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  {{!-- Page Meta --}}
+  <title>{{meta_title}}</title>
+  <meta name="description" content="{{meta_description}}" />
+
+  {{!-- Mobile Meta --}}
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  {{!-- Brand icon --}}
+  <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+  {{!-- Bootstrap v4 alpha css and then our custom css--}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.min.css"}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/custom.css"}}" />
+  <link href="{{asset "css/prism.css"}}" rel="stylesheet" />
+  <script type='text/javascript' src='https://use.fontawesome.com/c4be65488a.js?ver=1'></script>
+  {{!-- Ghost outputs important style and meta data with this tag --}}
+  {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+
+  <div class="site-wrapper">
+
+    {{!-- The navbar with Ghost navigation --}}
+    {{navigation}}
+
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+
+    {{!-- The tiny footer at the very bottom --}}
+    <div class="site-footer clearfix">
+      <div class="footer-text">
+        <div class="footer-icons">
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span></a>
+          <a href="#"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        </div>
+      &copy; 2013-{{date format="YYYY"}} {{@blog.title}}. All Rights Reserved<br/>
+      Proudly published with <a href="https://ghost.org">Ghost</a></div>
+    </div>
+
+  </div>
+
+  {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection, tether needed to support bootstrap functions --}}
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+
+  {{!-- bootstrap, custom js --}}
+  <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
+  <script type="text/javascript" src="{{asset "js/custom.js"}}"></script>
+  <script id="dsq-count-scr" src="//EXAMPLE.disqus.com/count.js" async></script>
+  <script src="{{asset "js/prism.js"}}"></script>
+  {{!-- Ghost outputs important scripts and data with this tag --}}
+  {{ghost_foot}}
+
+</body>
+</html>

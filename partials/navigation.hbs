@@ -1,0 +1,24 @@
+<div class="bg-gradient">
+  <nav class="navbar navbar-toggleable-md navbar-inverse container">
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#nav-menu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </button>
+
+  <a class="navbar-brand" href="{{@blog.url}}"><span class="blue">RYAN</span>OCONNOR</a>
+
+  <div class="collapse navbar-collapse justify-content-end" id="nav-menu">
+    <ul class="navbar-nav justify-content-end">
+      {{!-- Loop through and create links--}}
+      {{#foreach navigation}}
+      <li class="nav-item nav-{{slug}}{{#if current}} active{{/if}}">
+        <a class="nav-link" href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+      {{/foreach}}
+      <li class="nav-item nav-icon"><a class="nav-link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span> Twitter</span></a></li>
+      <li class="nav-item nav-icon"><a class="nav-link" href="#"><i class="fa fa-github" aria-hidden="true"></i><span> GitHub</span></a></li>
+    </ul>
+  </div>
+
+</nav>
+</div>
