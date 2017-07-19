@@ -2,7 +2,7 @@
 {{#foreach posts}}
   {{#if @first}}
       {{#is "home"}}
-        <div id="first-post" {{#if image}} style="background-image: url({{image}}){{/if}}">
+        <div id="first-post" {{#if feature_image}} style="background-image: url({{feature_image}}){{/if}}">
           <div class="jumbotron jumbotron-fluid">
             <div class="container">
             {{#foreach tags}}
@@ -21,8 +21,8 @@
         <div class="col-md-6">
           <a href="{{url}}">
           <div class="card card-inverse">
-            {{#if image}}
-            <img class="card-img" src="{{image}}" alt="{{title}}">
+            {{#if feature_image}}
+            <img class="card-img" src="{{feature_image}}" alt="{{title}}">
             {{/if}}
             <div class="card-img-overlay">
               {{#foreach tags}}
@@ -38,8 +38,8 @@
   <div class="col-md-6">
     <a href="{{url}}">
     <div class="card card-inverse">
-      {{#if image}}
-      <img class="card-img" src="{{image}}" alt="{{title}}">
+      {{#if feature_image}}
+      <img class="card-img" src="{{feature_image}}" alt="{{title}}">
       {{/if}}
       <div class="card-img-overlay">
         {{#foreach tags}}
