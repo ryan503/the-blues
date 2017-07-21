@@ -57,6 +57,15 @@ body {
     background-color: rgba(44, 62, 80, 1.0);
 }
 
+a, a:active, a:visited {
+  color: #22A7F0;
+}
+
+a:hover {
+  color: #1774a8;
+  text-decoration: none;
+}
+
 .blue {
   color: #22A7F0;
 }
@@ -171,10 +180,6 @@ body {
   margin: 0 auto 0 auto;
 }
 
-.posts-container {
-  padding: 0;
-}
-
 .card-img-overlay {
     @include background-gradient(.7, .7);
     .badge {
@@ -268,14 +273,21 @@ body {
 
 .share {
   max-width: 850px;
-  margin: 1rem auto 1rem auto;
+  margin: auto;
+}
+
+.post-container {
+  padding-top: 1rem;
 }
 
 .post-content, .page-content {
   p {
-      margin: 1rem auto 1rem auto;
+      margin: 1rem auto 1rem auto !important;
+      line-height: 170%;
+      font-size: 1.25rem;
+      max-width: 850px;
   }
-  p, span,ul,ol, hr {
+  span,ul,ol, hr {
   line-height: 170%;
   font-size: 1.25rem;
   max-width: 850px;
@@ -294,6 +306,10 @@ body {
   }
 }
 
+.page-content {
+  padding-bottom: 1rem;
+}
+
 blockquote, .blockquote {
     padding: .5rem 1rem;
     margin: 2rem auto 1rem auto;
@@ -305,9 +321,6 @@ blockquote, .blockquote {
     }
 }
 
-.page-content {
-    padding-bottom: 2rem;
-}
 
 @media(min-width: 960px) {
   .post-content p img, .page-content p img {
