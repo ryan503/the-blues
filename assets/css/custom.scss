@@ -57,7 +57,7 @@ body {
     background-color: rgba(44, 62, 80, 1.0);
 }
 
-a, a:active, a:visited {
+a:not(.btn), a:active:not(.btn), a:visited:not(.btn) {
   color: #22A7F0;
 }
 
@@ -81,10 +81,6 @@ a:hover {
 
 .btn-primary:hover {
    background-color:  #1774a8;
-}
-
-.btn:active, .btn:visited {
-    color: #fff;
 }
 
 .btn-twitter {
