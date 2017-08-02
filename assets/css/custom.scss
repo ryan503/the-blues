@@ -39,11 +39,11 @@ body {
   .footer-icons {
     font-size: 1.5rem;
     a, a:visited, a:active {
-      color: #ccc;
+      color: #ccc !important;
       margin: 0 .5rem 0 .5rem;
     }
     a:hover {
-      color: #fff;
+      color: #fff !important;
     }
   }
 }
