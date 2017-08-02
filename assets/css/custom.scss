@@ -83,6 +83,10 @@ a:hover {
    background-color:  #1774a8;
 }
 
+.btn:active, .btn:visited {
+    color: #fff;
+}
+
 .btn-twitter {
   font-size: 1rem;
   text-transform: uppercase;
