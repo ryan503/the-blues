@@ -49,7 +49,7 @@ body {
 a:not(.btn):not(.navbar-brand), a:active:not(.btn):not(.navbar-brand), a:visited:not(.btn):not(.navbar-brand) {
   color: #22A7F0; }
 
-a:hover:not(.navbar-brand) {
+a:hover:not(.btn):not(.navbar-brand) {
   color: #1774a8;
   text-decoration: none; }
 
