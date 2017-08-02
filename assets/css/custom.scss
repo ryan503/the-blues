@@ -57,11 +57,11 @@ body {
     background-color: rgba(44, 62, 80, 1.0);
 }
 
-a:not(.btn), a:active:not(.btn), a:visited:not(.btn) {
+a:not(.btn):not(.navbar-brand), a:active:not(.btn):not(.navbar-brand), a:visited:not(.btn):not(.navbar-brand) {
   color: #22A7F0;
 }
 
-a:hover {
+a:hover:not(.navbar-brand) {
   color: #1774a8;
   text-decoration: none;
 }
